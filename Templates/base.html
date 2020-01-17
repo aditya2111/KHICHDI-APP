@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,22 +12,22 @@
 
     <title>{% block title %} {% endblock %}</title>
   </head>
-  <body style="background-image: url(images/BACKGROUND.png); background-repeat: no-repeat; background-position-x:center; background-position-y: -200px; background-size:auto;">
+  <body style="background-image: url({% static 'images/BACKGROUND.gif' %}); background-repeat: no-repeat; background-position-x:center; background-position-y: -200px; background-size:auto;">
     
   <div class="container" >
     <div class="col-xs-3">
       <nav class="navbar navbar-transparent bg-transparent fixed-bottom">
         <a class="navbar-brand" href="interface/" style = "border:black 2px">
-          <img src="images/interface.gif" width="120" height="120" class="d-inline-block align-top" alt="" > 
+          <img src={% static 'images/interface.gif' %} width="120" height="120" class="d-inline-block align-top" alt="" > 
         </a>
         <a class="navbar-brand" href="post/">
-          <img src="images/post.gif" width="120" height="120" class="d-inline-block align-top" alt="" > 
+          <img src={% static 'images/post.gif' %} width="120" height="120" class="d-inline-block align-top" alt="" > 
         </a>
         <a class="navbar-brand" href="poll/">
-          <img src="images/poll.gif" width="120" height="120" class="d-inline-block align-top" alt="">
+          <img src={% static 'images/poll.gif' %} width="120" height="120" class="d-inline-block align-top" alt="">
         </a>
         <a class="navbar-brand" href="profile/">
-          <img src="images/profile.gif" width="120" height="120" class="d-inline-block align-top" alt="">
+          <img src={% static 'images/profile.gif' %} width="120" height="120" class="d-inline-block align-top" alt="">
         </a>
       </nav>
     </div>
